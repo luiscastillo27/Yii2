@@ -29,8 +29,8 @@ class Usuarios extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'usuario', 'password', 'estado', 'fecha'], 'required'],
-            [['id', 'estado'], 'integer'],
+            [['usuario', 'password', 'estado', 'fecha'], 'required'],
+            [['estado'], 'integer'],
             [['usuario', 'password'], 'string', 'max' => 27],
             [['fecha'], 'string', 'max' => 11],
         ];
