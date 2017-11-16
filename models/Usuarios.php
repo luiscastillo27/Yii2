@@ -7,11 +7,9 @@ use Yii;
 /**
  * This is the model class for table "usuarios".
  *
- * @property integer $id
+ * @property integer $idUser
  * @property string $usuario
- * @property string $password
- * @property integer $estado
- * @property string $fecha
+ * @property string $contrasena
  */
 class Usuarios extends \yii\db\ActiveRecord
 {
@@ -29,10 +27,8 @@ class Usuarios extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['usuario', 'password', 'estado', 'fecha'], 'required'],
-            [['estado'], 'integer'],
-            [['usuario', 'password'], 'string', 'max' => 27],
-            [['fecha'], 'string', 'max' => 11],
+            [['usuario', 'contrasena'], 'required'],
+            [['usuario', 'contrasena'], 'string', 'max' => 50],
         ];
     }
 
@@ -42,11 +38,9 @@ class Usuarios extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
+            'idUser' => 'Id User',
             'usuario' => 'Usuario',
-            'password' => 'Password',
-            'estado' => 'Estado',
-            'fecha' => 'Fecha',
+            'contrasena' => 'Contrasena',
         ];
     }
 }

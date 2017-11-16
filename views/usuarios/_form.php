@@ -14,11 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'usuario')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'password')->passwordInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'estado')->textInput() ?>
-
-    <?= $form->field($model, 'fecha')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'contrasena')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
